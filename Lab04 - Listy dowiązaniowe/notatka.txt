@@ -1,0 +1,9 @@
+wstaw(x): Przyprowadzasz do grupy nowe dziecko. Nauczycielka puszcza rękę dotychczasowego pierwszego dziecka i łapie za rękę nowe. Nowe dziecko swoją drugą ręką łapie stare pierwsze dziecko. Złożoność to O(1), bo interesuje nas tylko sam początek rzędu.
+
+drukuj(): Nauczycielka idzie wzdłuż rzędu. Zaczyna od dziecka, które trzyma za rękę i czyta jego numer na koszulce. Następnie patrzy, kogo to dziecko trzyma za prawą rękę, przechodzi do niego i znów czyta numer. I tak aż do końca grupy.
+
+szukaj(x): Nauczycielka znów idzie wzdłuż rzędu, ale tym razem nie czyta wszystkiego na głos. Pyta każdego po kolei: "Czy masz na koszulce numer X?". Jeśli znajdzie to dziecko, zatrzymuje się i na nie wskazuje. Jeśli dojdzie do końca i nikt takiego numeru nie miał, mówi "Nie ma".
+
+usuń(x): Jeśli Nauczycielka znajdzie odpowiednie dziecko, każe mu wyjść z szeregu. Co się wtedy dzieje z rączkami? Dziecko, które stało przed nim, wyciąga rękę i łapie bezpośrednio to dziecko, które stało za tym usuwanym. Dziura zostaje załatana, szyki zwarte!
+
+top(): To po prostu szybkie usunięcie pierwszego dziecka. Pierwsze dziecko odchodzi, a Nauczycielka po prostu łapie za rękę drugie dziecko w rzędzie. Złożoność O(1).
