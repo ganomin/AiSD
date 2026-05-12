@@ -39,7 +39,6 @@ def h2(input_data, m):
 
         hash_table[hash_value % m].append(word)
 
-
     return hash_table
 
 
@@ -56,7 +55,8 @@ def get_non_empty_list_lengths(output):
 
 
 def avg_list_length(output):
-    return sum(get_non_empty_list_lengths(output)) / len(get_non_empty_list_lengths(output)) if get_non_empty_list_lengths(output) else 0
+    return sum(get_non_empty_list_lengths(output)) / len(get_non_empty_list_lengths(output))\
+        if get_non_empty_list_lengths(output) else 0
 
 
 def run_experiment():
@@ -64,7 +64,8 @@ def run_experiment():
     data_size = 5000
     m_sizes = [839, 1667, 2503]
 
-    print(f"{'m':<4} | {'funkcja haszująca':<17} | {'liczba pustych list':<19} | {'maks. długość listy':<19} | {'średnia długość niepustych list'}")
+    print(f"{'m':<4} | {'funkcja haszująca':<17} | {'liczba pustych list':<19} | {'maks. długość listy':<19} |"
+          f"{'średnia długość niepustych list'}")
     print("-" * 103)
 
     for m in m_sizes:
@@ -80,8 +81,10 @@ def run_experiment():
         h1_avg_list_length = avg_list_length(h1_output)
         h2_avg_list_length = avg_list_length(h2_output)
 
-        print(f"{m:<4} | {"h1":<17} | {h1_count_empty_elements:<19} | {h1_get_longest_list:<19} | {h1_avg_list_length:.2f}")
-        print(f"{m:<4} | {"h2":<17} | {h2_count_empty_elements:<19} | {h2_get_longest_list:<19} | {h2_avg_list_length:.2f}")
+        print(f"{m:<4} | {"h1":<17} | {h1_count_empty_elements:<19} | {h1_get_longest_list:<19} |"
+              f"{h1_avg_list_length:.2f}")
+        print(f"{m:<4} | {"h2":<17} | {h2_count_empty_elements:<19} | {h2_get_longest_list:<19} |"
+              f"{h2_avg_list_length:.2f}")
         print("-" * 103)
 
 
